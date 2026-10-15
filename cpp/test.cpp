@@ -144,3 +144,28 @@ public:
         }
     }
 };*/
+
+
+
+//对象大小
+
+/*class A
+{
+    int a;
+    char b;
+    char c;
+};
+class B
+{
+    char b;
+    int a;
+    char c;
+};
+
+int main(){
+    A a;
+    B b;
+    cout<<sizeof(a)<<endl;
+    cout<<sizeof(b)<<endl;
+    return 0;
+}*/
