@@ -17,6 +17,7 @@ using namespace std;
 // }
 
 //示例 2：引用传参改造栈
+/*
 //顺序栈结构体定义
 typedef struct Stack
 {
@@ -77,3 +78,69 @@ int main()
 
     return 0;
 }
+*/
+//const引用要点：
+// 引用 const 对象时必须使用 const 引用。
+// const 引用可以引用普通对象，权限可以缩小。******
+// 普通引用不能引用 const 对象，否则是权限放大。
+// 表达式结果、类型转换结果通常会产生临时对象；
+//临时对象具有常性，必须使用 const 引用。******
+
+//const引用：只读
+//普通引用：读写
+//const对象：只读
+//普通对象：读写
+
+//[补充例题·力扣] 88. 合并两个有序数组
+
+//开新数组
+/*class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        vector<int> nums(n+m, 0);
+        for(int i = 0, j = 0, k = 0; i < n + m; i++){
+            if(j < m && k < n){
+                if(nums1[j] <= nums2[k]){
+                    nums[i] = nums1[j++];
+                }
+                else{
+                nums[i] = nums2[k++];
+                }
+            }
+            else{
+                if(j==m){
+                    nums[i] = nums2[k++];
+                }
+                else{
+                nums[i] = nums1[j++];
+                }
+            }
+        }
+        for(int i = 0; i<m+n; i++){
+            nums1[i]=nums[i];
+        }        
+    }
+};*/
+
+//双指针逆序
+
+
+// [补充例题·力扣] 283. 移动零
+/*class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int j = 0, n = 0;
+        for(int i = 0, tmp = 0; i < nums.size(); i++){
+            if(nums[i] == 0){
+                n++;
+            }
+            else{
+                tmp = nums[i];
+                nums[j++] = tmp;
+            }
+        }
+        while(n--){
+            nums[j++] = 0;
+        }
+    }
+};*/
